@@ -10,6 +10,7 @@ const Pagination = () => {
 
   return (
     <div className='pagination'>
+      <button onClick={()=>goToPage(1)}>{"<<"}</button>
       <button onClick={()=>getPrevPage()}>{"<"}</button>
       <ul>
       {pageNumbers.map(number=>(
@@ -23,6 +24,7 @@ const Pagination = () => {
       </ul>
       {/* <p>{page} of {nbPages}</p> */}
       <button onClick={()=>getNextPage()}>{">"}</button>
+      <button onClick={()=>goToPage(nbPages)}>{">>"}</button>
     </div>
   )
 }
