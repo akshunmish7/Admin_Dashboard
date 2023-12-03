@@ -22,7 +22,6 @@ const Pagination = () => {
         </li>
       ))}
       </ul>
-      {/* <p>{page} of {nbPages}</p> */}
       <button onClick={()=>getNextPage()}>{">"}</button>
       <button onClick={()=>goToPage(nbPages)}>{">>"}</button>
     </div>

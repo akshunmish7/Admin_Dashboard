@@ -46,23 +46,17 @@ const AppProvider = ({children})=>{
             type:"PAGINATE"
         });
       }
-
-    //to remove user
     function removePost(ID) {
         dispatch({
             type:"REMOVE_POST",
             payload:ID
         });
     }
-
-    //to remove multiple users
     function removeMultiple(IDARRAY) {
         while (IDARRAY.length>0) {
             removePost(IDARRAY.pop());
         }
     }
-
-    //search
     function searchUser(SearchQuery) {
         dispatch({
             type:"SEARCH_QUERY",
@@ -70,8 +64,6 @@ const AppProvider = ({children})=>{
         });
         paginate();
     }
-
-    //pagination
     function getNextPage() {
         dispatch({
             type:"NEXT_PAGE",
